@@ -1,0 +1,229 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+}
+
+.center {
+    padding-left: calc(50% - 600px);
+    padding-right: calc(50% - 600px);
+}
+
+.header {
+    background-color: rgb(225, 255, 143);
+    height: 840px;
+    background-image: url(./img/Group\ 1597880565.png);
+    background-repeat: no-repeat;
+    background-position: 889px -303px;
+
+}
+
+.star_1 {
+    position: absolute;
+    left: 63px;
+    top: 94px;
+}
+
+.star_2 {
+    position: absolute;
+    left: 156px;
+    top: 69px;
+}
+
+.star_3 {
+    position: absolute;
+    left: 948px;
+    top: 538px;
+}
+
+.star_4 {
+    position: absolute;
+    left: 1013px;
+    top: 568px;
+}
+
+.group {
+    position: absolute;
+    right: -523px;
+    top: -303px;
+    bottom: -27.46px;
+}
+
+.top-box__heading-big {
+    color: rgb(32, 32, 39);
+
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    letter-spacing: 0px;
+    text-align: left;
+    width: 769px;
+    height: 156px;
+}
+
+.top-box {
+    padding-top: 196px;
+    position: relative;
+
+}
+
+.top-box__text {
+    color: rgb(32, 32, 39);
+
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    margin-top: 34px;
+    width: 720px;
+}
+
+.top-btn {
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 141.69%;
+    letter-spacing: 0%;
+    text-align: center;
+    padding: 16px 28px;
+    width: 247px;
+    margin-top: 48px;
+    transition: all 0.5s;
+    background: rgb(32, 32, 39);
+    font-family: Montserrat;
+
+}
+
+.btn-link:hover {
+    color: rgb(245, 237, 237);
+    background: rgb(255, 255, 255);
+
+}
+
+.star_1 {
+    position: absolute;
+    width: 57px;
+    height: 57px;
+    left: 63px;
+    top: 94px;
+
+}
+
+.game {
+    background-color: #202027;
+    position: relative;
+    background-image: url(./img/Star_game.png);
+    background-repeat: no-repeat;
+    background-position: 1021px 77px;
+    height: 1470px;
+
+}
+
+.game-top {
+    padding-top: 94px;
+}
+
+.game-content {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    margin-top: 72px;
+    gap: 32px;
+
+
+
+}
+
+.game-link {
+    text-decoration: none;
+    grid-column: span 4;
+
+
+}
+
+.game-card {
+    grid-column: span 4;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    height: 473px;
+    transition: transform 0.7s;
+
+}
+
+.game-card:hover {
+    transform: scale(1.1)
+}
+
+.medium {
+    height: 512px;
+
+}
+
+.big {
+    height: 551px;
+    margin-top: -39px;
+}
+
+.game-card-info {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.game-card-info__text {
+
+    width: 108px;
+    height: 36px;
+    border-radius: 52.58px;
+    background: rgb(247, 247, 247);
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: rgb(32, 32, 39);
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 110%;
+
+
+}
+
+.heading {
+    color: rgb(255, 255, 255);
+    font-size: 64px;
+    font-weight: 700;
+    line-height: 78px;
+    letter-spacing: 0px;
+    text-align: left;
+
+}
+
+.game-top__text {
+    color: rgb(255, 255, 255);
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 32px;
+    letter-spacing: 0px;
+    text-align: left;
+    padding-top: 24px;
+}
+
+.game-card-info__heading {
+    color: rgb(32, 32, 39);
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 39px;
+}
+
+@import 'mobile';

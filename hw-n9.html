@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>hw9</title>
+    <style>
+       
+    </style>
+</head>
+<body>
+
+<h1 class="title">Заголовок</h1>
+<button class="btn">Скрыть</button>
+
+<p class="text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit, aliquid.</p>
+<button class="btn-color">Изменить цвет</button>
+<button class="text-btn">Изменить текст</button>
+<button class="changeTextButton">Изменить много текста</button>
+<h2 class="description">Первый элемент описания</h2>
+<p class="description">Второй элемент описания</p>
+<div class="description">Третий элемент описания</div>
+<span class="description">Четвертый элемент описания</span>
+
+<button class="btn-five">Кнопка для пятого задания </button>
+<p class="description1">Первый абзац с классом description.</p>
+<p class="description1">Второй абзац с классом description.</p>
+<p class="description1">Третий абзац с классом description.</p>
+<button class="addElementButton">Добавить элемент</button>
+<button class="removeElementButton">Удалить элемент</button>
+
+<script>
+    
+    const titleEl = document.querySelector('.title');
+    const buttonEl = document.querySelector('.btn');
+
+  
+    buttonEl.addEventListener('click', function() {
+        
+        if (titleEl.style.display === 'none') {
+            titleEl.style.display = 'block';
+            buttonEl.textContent = 'Скрыть'; 
+        } else {
+            titleEl.style.display = 'none'; 
+            buttonEl.textContent = 'Показать'; 
+        }
+    });
+    
+    const textEl = document.querySelector('.text');
+    const btnColorEl = document.querySelector('.btn-color');
+
+    btnColorEl.addEventListener('click', function() {
+        textEl.style.color = 'blue';
+    });
+
+    const textBtnEl = document.querySelector('.text-btn'); 
+
+    textBtnEl.addEventListener('click', function() {
+        titleEl.textContent = 'Привет, мир!';
+    });
+
+       
+        const changeTextButton = document.querySelector('.btn-five');
+
+
+changeTextButton.addEventListener('click', function() {
+   
+    const descriptionElements = document.querySelectorAll('.description');
+
+   
+    descriptionElements.forEach(function(element) {
+        element.textContent = 'Измененный текст'; 
+    });
+
+    const textButtonFive = document.querySelector('.btn-five');
+
+    textButtonFive.addEventListener('click', function() {
+        
+        const descriptionElements1 = document.querySelectorAll('.description1');
+
+        descriptionElements1.forEach(function(element) {
+            element.textContent = 'Новый текст'; 
+        });
+    });
+});
+
+// Я вовремя не поставил разделяющие комменты и уже запутался, что где, прошу заранее прощения, что так неудобно проверять
+
+  
+  const addElementButton = document.querySelector('.addElementButton');
+
+addElementButton.addEventListener('click', function() {
+
+    const newParagraph = document.createElement('p');
+    
+    newParagraph.textContent = 'Новый абзац';
+
+    document.body.appendChild(newParagraph);
+});
+// 7
+
+const removeElementButton = document.querySelector('.removeElementButton');
+
+removeElementButton.addEventListener('click', function() {
+
+    const firstDescriptionElement = document.querySelector('.description');
+
+    if (firstDescriptionElement) {
+        firstDescriptionElement.remove(); 
+    }
+});
+
+
+</script>
+
+</body>
+</html>
