@@ -166,12 +166,25 @@ function playGame() {
     alert(`Ваш выбор: ${userChoice}\nВыбор компьютера: ${computerChoice}\nРезультат: ${result}`);
 }
 //Код для шестой игры 
-document.getElementById('colorButton').addEventListener('click', function() {
-    // Генерация случайного цвета
-    const randomColor = '#' + Math.floor(Math.random() * 16777215).toString(16);
-    // Изменение цвета фона
-    document.getElementById('colorBlock').style.backgroundColor = randomColor;
-});
+const changeBackgroundBtn = document.getElementById('changeBackgroundBtn');
+
+function getRandomColor() {
+    const r = Math.floor(Math.random() * 256);
+    const g = Math.floor(Math.random() * 256);
+    const b = Math.floor(Math.random() * 256);
+    return `rgb(${r}, ${g}, ${b})`;
+}
+
+function changeBackgroundColor() {
+    const randomColor = getRandomColor();
+    const gamesSection = document.getElementById('game'); 
+    const miniGameBox = document.querySelector('.mini-game-box'); 
+
+    gamesSection.style.backgroundColor = randomColor; 
+    miniGameBox.style.backgroundColor = randomColor; 
+}
+
+changeBackgroundBtn.addEventListener('click', changeBackgroundColor);
 
 
 //Задание 1
