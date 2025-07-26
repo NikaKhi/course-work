@@ -264,4 +264,5 @@ function sayHi(name) {
 
 delayForSecond(() => sayHi('Глеб')); 
 
-
+// Проверка ширины в консоли
+console.log('Ширина body:', document.body.clientWidth);
