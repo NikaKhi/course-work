@@ -18,11 +18,10 @@ body {
 }
 
 .header {
-  background-color: rgb(225, 255, 143);
-  height: 800px;
-  background-image: url(./img/Group\ 1597880565.png);
-  background-repeat: no-repeat;
-  background-position: 889px -303px;
+   background-color: rgb(225, 255, 143);
+    background-image: url(./img/Group\ 1597880565.png), url(./img/mob-star1.png), url(./img/mob-star3.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% + 486px) -323px;
 }
 
 .star_1 {
@@ -62,9 +61,7 @@ body {
   font-weight: 700;
   line-height: 78px;
   letter-spacing: 0px;
-  text-align: left;
   width: 769px;
-  height: 156px;
 }
 
 .top-box {
@@ -91,7 +88,6 @@ body {
   font-size: 24px;
   font-weight: 600;
   line-height: 141.69%;
-  letter-spacing: 0%;
   text-align: center;
   padding: 16px 28px;
   width: 247px;
@@ -120,9 +116,13 @@ body {
   padding: 16px 28px;
   width: 247px;
   margin-top: 48px;
+  margin-bottom: 156px;
   transition: all 0.5s;
   background: rgb(32, 32, 39);
   text-decoration: none;
+}
+.btn-link-mobile {
+  display: none;
 }
 .btn-link:hover {
   color: rgb(32, 32, 39);
@@ -131,7 +131,7 @@ body {
 
 /* Анимация бегущей строки с играми */
 .game-strip-container {
-  height: 50px;
+  height: 90px;
   background: #BCEC30;
   padding: 27px 49px;
   overflow: hidden;
@@ -278,7 +278,7 @@ body {
 
 /* Стили для карточек игр */
 .mini-game-box {
-  height: 3500px;
+  padding-bottom: 144px;
   background: #202027;
   background-image: url(img/star-mini1.svg), url(img/star-mini2.svg);
   background-position: calc(100% - 80px) calc(100% - 3299px), calc(100% - 80px) calc(100% - 45px);
@@ -300,14 +300,18 @@ body {
 }
 
 .mini-game {
-  width: 1200px;
+  width: 100%;
   border-radius: 30px;
   background: #FFF;
   display: flex;
+  overflow: hidden;
 }
 .mini-game__info {
   padding: 48px;
-  width: 504px;
+  flex: 0 0 42%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 .mini-game__title {
   color: #202027;
@@ -345,8 +349,19 @@ body {
   background: #fff;
   color: #202027;
 }
+.mini-game__image {
+  flex: 0 0 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
 .mini-game__img {
   border-radius: 30px;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .mini-game_two {
   flex-direction: row-reverse;
@@ -367,8 +382,216 @@ body {
   justify-content: center;
 }
 
+@media (max-width: 1024px) {
+  .center {
+    padding-left: calc(50% - 393px);
+    padding-right: calc(50% - 393px);
+  }
+  .header {
+    background-image: url(./img/bgi-mob.png);
+    background-repeat: no-repeat;
+    background-position: calc(100% + 95px) -82px;
+  }
+  .game {
+    display: none;
+  }
+  .mini-game__title {
+    font-size: 36px;
+    line-height: 44px;
+    padding-bottom: 18px;
+  }
+  .mini-game__text {
+    font-size: 20px;
+    line-height: 28px;
+    padding-bottom: 28px;
+  }
+  .mini-game__button {
+    width: 100%;
+  }
+}
 @media (max-width: 767px) {
+  /* Базовые сбросы */
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+    position: relative;
+    background: #202027;
+  }
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+  }
+  /* Фиксируем ширину контента */
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+    width: 100%;
+    margin: 0 auto;
+  }
+  .top-box {
+    padding-top: 147px;
+    padding-bottom: 131px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .top-box__heading-big {
     font-size: 40px;
+    line-height: 49px;
+    width: 262px;
+  }
+  .top-box__text {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    width: 296px;
+    margin-top: 24px;
+    margin-bottom: 36px;
+  }
+  .btn-link {
+    display: none;
+  }
+  .btn-link-mobile {
+    margin: 0 auto;
+    display: inline-block;
+    box-sizing: border-box;
+    border: 1px solid rgb(32, 32, 39);
+    border-radius: 60px;
+    color: rgb(255, 255, 255);
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 141.69%;
+    text-align: center;
+    padding: 16px 28px;
+    width: 285px;
+    transition: all 0.5s;
+    background: rgb(32, 32, 39);
+    text-decoration: none;
+  }
+  /* Бегущая строка */
+  .game-strip-container {
+    height: 50px;
+  }
+  .game-strip {
+    display: inline-block;
+    white-space: nowrap;
+    padding: 0 20px;
+  }
+  .game-strip .game-item {
+    display: inline-block;
+    margin: 0 15px;
+    font-size: 16px;
+    line-height: 110%;
+    padding: 16px 27px;
+  }
+  .game-strip .game-item img {
+    width: 20px;
+    height: 20px;
+  }
+  .game {
+    display: none;
+  }
+  /* Заголовок "Мини-игры" */
+  .mini-game-box {
+    background-image: none;
+    padding-bottom: 49px;
+  }
+  .mini-game-box__title {
+    font-size: 40px;
+    line-height: 49px;
+    padding-bottom: 48px;
+  }
+  /* Секция с играми */
+  .mini-game-box__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+    width: 100%;
+    padding-bottom: 30px;
+  }
+  /* Карточка игры */
+  .mini-game {
+    height: 100%;
+    width: 100%;
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column-reverse;
+  }
+  .mini-game__info {
+    padding: 29px;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+  }
+  .mini-game__title {
+    font-size: 32px;
+    line-height: 39px;
+  }
+  .mini-game__text {
+    font-size: 16px;
+    line-height: 20px;
+    padding-top: 16px;
+    padding-bottom: 32px;
+    flex-grow: 1;
+  }
+  .mini-game__button {
+    width: 100%;
+    max-width: 285px;
+    height: 55px;
+    background: #202027;
+    color: white;
+    border-radius: 25px;
+    border: none;
+    font-size: 16px;
+    line-height: 141.69%;
+    margin: 0 auto;
+    display: block;
+  }
+  .mini-game__img {
+    width: 100%;
+    height: 50%;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  /* Футер */
+  .footer {
+    height: 100px;
+    background: #BDED35;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer__text {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+  }
+  /* Фиксы для конкретных игр */
+  #game1 .mini-game__text:after {
+    content: "6 11 48\a 2  8\a 4 92 10";
+    white-space: pre;
+    display: block;
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+    line-height: 2;
+  }
+  #game2 .mini-game__text:after {
+    content: "100 ÷ 4 = ?\a 9 ÷ 1 = ?\a 16 - 6 = ?\a 3 ÷ 2 = ?\a 4 ÷ 2 = ?";
+    white-space: pre;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    line-height: 2;
   }
 }/*# sourceMappingURL=style.css.map */

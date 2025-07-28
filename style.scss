@@ -17,11 +17,10 @@ body {
 }
 
 .header {
-    background-color: rgb(225, 255, 143);
-    height: 800px;
-    background-image: url(./img/Group\ 1597880565.png);
+     background-color: rgb(225, 255, 143);
+    background-image: url(./img/Group\ 1597880565.png), url(./img/mob-star1.png), url(./img/mob-star3.png);
     background-repeat: no-repeat;
-    background-position: 889px -303px;
+    background-position: calc(100% + 486px) -323px;
 
 }
 
@@ -62,9 +61,7 @@ body {
     font-weight: 700;
     line-height: 78px;
     letter-spacing: 0px;
-    text-align: left;
     width: 769px;
-    height: 156px;
 }
 
 .top-box {
@@ -93,7 +90,6 @@ body {
     font-size: 24px;
     font-weight: 600;
     line-height: 141.69%;
-    letter-spacing: 0%;
     text-align: center;
     padding: 16px 28px;
     width: 247px;
@@ -123,10 +119,15 @@ body {
     padding: 16px 28px;
     width: 247px;
     margin-top: 48px;
+    margin-bottom: 156px;
     transition: all 0.5s;
     background: rgb(32, 32, 39);
     text-decoration: none;
-    
+
+    &-mobile {
+        display: none;
+    }
+
     &:hover {
         color: rgb(32, 32, 39);
         background: rgb(255, 255, 255);
@@ -135,12 +136,12 @@ body {
 
 /* Анимация бегущей строки с играми */
 .game-strip-container {
-    height: 50px;
+    height: 90px;
     background: #BCEC30;
     padding: 27px 49px;
     overflow: hidden;
     position: relative;
-    
+
     &__strip {
         display: flex;
         gap: 51px;
@@ -165,17 +166,18 @@ body {
     letter-spacing: 1.2px;
     text-transform: uppercase;
     white-space: nowrap;
-    
+
     img {
-        width: 24px;
-        height: 24px;
+        width: 36px;
+        height: 36px;
     }
 }
 
 @keyframes scroll {
     0% {
-        transform: translateX(0); 
+        transform: translateX(0);
     }
+
     100% {
         transform: translateX(-100%);
     }
@@ -299,7 +301,7 @@ body {
 
 /* Стили для карточек игр */
 .mini-game-box {
-    height: 3500px;
+    padding-bottom: 144px;
     background: #202027;
     background-image: url(img/star-mini1.svg), url(img/star-mini2.svg);
     background-position: calc(100% - 80px) calc(100% - 3299px), calc(100% - 80px) calc(100% - 45px);
@@ -323,14 +325,18 @@ body {
 }
 
 .mini-game {
-    width: 1200px;
+    width: 100%;
     border-radius: 30px;
     background: #FFF;
     display: flex;
+    overflow: hidden;
 
     &__info {
         padding: 48px;
-        width: 504px;
+        flex: 0 0 42%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
     }
 
     &__title {
@@ -346,7 +352,8 @@ body {
         font-size: 24px;
         font-style: normal;
         font-weight: 400;
-        line-height: 32px; /* 133.333% */
+        line-height: 32px;
+        /* 133.333% */
         padding-top: 24px;
         padding-bottom: 36px;
     }
@@ -365,7 +372,8 @@ body {
         font-size: 24px;
         font-style: normal;
         font-weight: 600;
-        line-height: 141.688%; /* 34.005px */
+        line-height: 141.688%;
+        /* 34.005px */
         font-family: "Montserrat", sans-serif;
     }
 
@@ -374,8 +382,19 @@ body {
         color: #202027;
     }
 
+    &__image {
+        flex: 0 0 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+    }
+
     &__img {
         border-radius: 30px;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
     }
 
     &_two {
@@ -399,5 +418,5 @@ body {
     }
 }
 
-@import 'mobile';
-@import 'tablet';
+@import "tablet";
+@import "mobile";
