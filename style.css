@@ -19,12 +19,12 @@ body {
 
 .header {
    background-color: rgb(225, 255, 143);
-    background-image: url(./img/Group\ 1597880565.png), url(./img/mob-star1.png), url(./img/mob-star3.png);
+    background-image: url(./img/Group\ 1597880565.png), url(./img/mob-star1.png),url(./img/mob-star3.png);
     background-repeat: no-repeat;
-    background-position: calc(100% + 486px) -323px;
+    background-position: calc(100% + 450px) -400px,  64px 69px, 1250px 468px;
 }
 
-.star_1 {
+/* .star_1 {
   position: absolute;
   left: 63px;
   top: 94px;
@@ -46,7 +46,7 @@ body {
   position: absolute;
   left: 1013px;
   top: 568px;
-}
+} */
 
 .group {
   position: absolute;
@@ -133,7 +133,6 @@ body {
 .game-strip-container {
   height: 90px;
   background: #BCEC30;
-  padding: 27px 49px;
   overflow: hidden;
   position: relative;
 }
@@ -144,6 +143,7 @@ body {
   position: absolute;
   left: 0;
   align-items: center;
+  padding: 27px 49px;
 }
 
 .game-strip {
