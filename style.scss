@@ -17,36 +17,11 @@ body {
 }
 
 .header {
-     background-color: rgb(225, 255, 143);
-    background-image: url(./img/Group\ 1597880565.png), url(./img/mob-star1.png), url(./img/mob-star3.png),;
+    background-color: rgb(225, 255, 143);
+    background-image: url(./img/Group\ 1597880565.png), url(./img/mob-star1.png), url(./img/mob-star3.png), ;
     background-repeat: no-repeat;
-    background-position: calc(100% + 450px) -400px,  64px 69px, 1250px 468px;
-
+    background-position: calc(100% + 450px) -400px, 64px 69px, 1250px 468px;
 }
-
-// .star_1 { 
-//     position: absolute;
-//     left: 63px;
-//     top: 94px;
-// }
-
-// .star_2 {
-//     position: absolute;
-//     left: 156px;
-//     top: 69px;
-// }
-
-// .star_3 {
-//     position: absolute;
-//     left: 948px;
-//     top: 538px;
-// }
-
-// .star_4 {
-//     position: absolute;
-//     left: 1013px;
-//     top: 568px;
-// }
 
 .group {
     position: absolute;
@@ -303,8 +278,8 @@ body {
 .mini-game-box {
     padding-bottom: 144px;
     background: #202027;
-    background-image: url(img/star-mini1.svg), url(img/star-mini2.svg);
-    background-position: calc(100% - 80px) calc(100% - 3299px), calc(100% - 80px) calc(100% - 45px);
+    background-image: url(img/star-mini1.png), url(img/star-mini2.png);
+    background-position: calc(100% - 80px) calc(100% - 3115px), calc(100% - 80px) calc(100% - 12px);
     background-repeat: no-repeat;
 
     &__title {

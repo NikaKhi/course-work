@@ -18,35 +18,11 @@ body {
 }
 
 .header {
-   background-color: rgb(225, 255, 143);
-    background-image: url(./img/Group\ 1597880565.png), url(./img/mob-star1.png),url(./img/mob-star3.png);
-    background-repeat: no-repeat;
-    background-position: calc(100% + 450px) -400px,  64px 69px, 1250px 468px;
+  background-color: rgb(225, 255, 143);
+  background-image: url(./img/Group\ 1597880565.png), url(./img/mob-star1.png), url(./img/mob-star3.png);
+  background-repeat: no-repeat;
+  background-position: calc(100% + 450px) -400px, 64px 69px, 1250px 468px;
 }
-
-/* .star_1 {
-  position: absolute;
-  left: 63px;
-  top: 94px;
-}
-
-.star_2 {
-  position: absolute;
-  left: 156px;
-  top: 69px;
-}
-
-.star_3 {
-  position: absolute;
-  left: 948px;
-  top: 538px;
-}
-
-.star_4 {
-  position: absolute;
-  left: 1013px;
-  top: 568px;
-} */
 
 .group {
   position: absolute;
@@ -162,8 +138,8 @@ body {
   white-space: nowrap;
 }
 .game-item img {
-  width: 24px;
-  height: 24px;
+  width: 36px;
+  height: 36px;
 }
 
 @keyframes scroll {
@@ -280,8 +256,8 @@ body {
 .mini-game-box {
   padding-bottom: 144px;
   background: #202027;
-  background-image: url(img/star-mini1.svg), url(img/star-mini2.svg);
-  background-position: calc(100% - 80px) calc(100% - 3299px), calc(100% - 80px) calc(100% - 45px);
+  background-image: url(img/star-mini1.png), url(img/star-mini2.png);
+  background-position: calc(100% - 80px) calc(100% - 3115px), calc(100% - 80px) calc(100% - 12px);
   background-repeat: no-repeat;
 }
 .mini-game-box__title {
@@ -325,7 +301,8 @@ body {
   font-size: 24px;
   font-style: normal;
   font-weight: 400;
-  line-height: 32px; /* 133.333% */
+  line-height: 32px;
+  /* 133.333% */
   padding-top: 24px;
   padding-bottom: 36px;
 }
@@ -342,7 +319,8 @@ body {
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 141.688%; /* 34.005px */
+  line-height: 141.688%;
+  /* 34.005px */
   font-family: "Montserrat", sans-serif;
 }
 .mini-game__button:hover {
@@ -472,26 +450,6 @@ body {
     background: rgb(32, 32, 39);
     text-decoration: none;
   }
-  /* Бегущая строка */
-  .game-strip-container {
-    height: 50px;
-  }
-  .game-strip {
-    display: inline-block;
-    white-space: nowrap;
-    padding: 0 20px;
-  }
-  .game-strip .game-item {
-    display: inline-block;
-    margin: 0 15px;
-    font-size: 16px;
-    line-height: 110%;
-    padding: 16px 27px;
-  }
-  .game-strip .game-item img {
-    width: 20px;
-    height: 20px;
-  }
   .game {
     display: none;
   }
@@ -575,23 +533,5 @@ body {
     font-size: 16px;
     line-height: 20px;
     text-align: center;
-  }
-  /* Фиксы для конкретных игр */
-  #game1 .mini-game__text:after {
-    content: "6 11 48\a 2  8\a 4 92 10";
-    white-space: pre;
-    display: block;
-    text-align: center;
-    font-weight: bold;
-    margin-top: 10px;
-    line-height: 2;
-  }
-  #game2 .mini-game__text:after {
-    content: "100 ÷ 4 = ?\a 9 ÷ 1 = ?\a 16 - 6 = ?\a 3 ÷ 2 = ?\a 4 ÷ 2 = ?";
-    white-space: pre;
-    display: block;
-    text-align: center;
-    margin-top: 10px;
-    line-height: 2;
   }
 }/*# sourceMappingURL=style.css.map */

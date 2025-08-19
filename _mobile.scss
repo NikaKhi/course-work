@@ -72,29 +72,29 @@
 
 
 
-    /* Бегущая строка */
-    .game-strip-container {
-        height: 50px;
-    }
+    // /* Бегущая строка */
+    // .game-strip-container {
+    //     height: 0px;
+    // }
 
-    .game-strip {
-        display: inline-block;
-        white-space: nowrap;
-        padding: 0 20px;
+    // .game-strip {
+    //     display: inline-block;
+    //     white-space: nowrap;
+    //     // padding: 0 20px;
 
-        .game-item {
-            display: inline-block;
-            margin: 0 15px;
-            font-size: 16px;
-            line-height: 110%;
-            padding: 16px 27px;
+    //     .game-item {
+    //         display: inline-block;
+    //         margin: 0 15px;
+    //         font-size: 16px;
+    //         line-height: 110%;
+    //         // padding: 7px 7px;
 
-            img {
-                width: 20px;
-                height: 20px;
-            }
-        }
-    }
+    //         img {
+    //             width: 20px;
+    //             height: 20px;
+    //         }
+    //     }
+    // }
 
     .game {
         display: none;
@@ -201,26 +201,6 @@
             line-height: 20px;
             text-align: center;
         }
-    }
-
-    /* Фиксы для конкретных игр */
-    #game1 .mini-game__text:after {
-        content: "6 11 48\A 2  8\A 4 92 10";
-        white-space: pre;
-        display: block;
-        text-align: center;
-        font-weight: bold;
-        margin-top: 10px;
-        line-height: 2;
-    }
-
-    #game2 .mini-game__text:after {
-        content: "100 ÷ 4 = ?\A 9 ÷ 1 = ?\A 16 - 6 = ?\A 3 ÷ 2 = ?\A 4 ÷ 2 = ?";
-        white-space: pre;
-        display: block;
-        text-align: center;
-        margin-top: 10px;
-        line-height: 2;
     }
 
 }
